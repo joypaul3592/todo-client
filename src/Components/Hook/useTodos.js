@@ -8,7 +8,7 @@ function useTodos() {
     useEffect(() => {
 
         const fetchData = async () => {
-            const { data } = await axios.get(`http://localhost:5000/alltodo`);
+            const { data } = await axios.get(`https://fast-wave-63089.herokuapp.com/alltodo`);
             if (!data.success) return toast.error(data?.error)
             setTodo(data?.data)
         }

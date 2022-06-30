@@ -38,7 +38,7 @@ const Home = () => {
             }
             console.log(todo)
             try {
-                const { data } = await axios.post(`http://localhost:5000/todos`, todo, {
+                const { data } = await axios.post(`https://fast-wave-63089.herokuapp.com/todos`, todo, {
                     method: 'POST'
                 });
 

@@ -22,7 +22,7 @@ const CompleteTask = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/completeTodos/`, {
+        fetch(`https://fast-wave-63089.herokuapp.com/completeTodos/`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const CompleteTask = () => {
         const deleteItems = window.confirm(`Want To Delete ${name} ?`)
         if (deleteItems) {
 
-            fetch(`http://localhost:5000/daleteTodo/${id}`, {
+            fetch(`https://fast-wave-63089.herokuapp.com/daleteTodo/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

@@ -13,7 +13,7 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
         console.log(data)
         const updateTodo = data
 
-        fetch(`http://localhost:5000/upToDo/${updateId}`, {
+        fetch(`https://fast-wave-63089.herokuapp.com/upToDo/${updateId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
         }
         console.log(updateCompleteTodo);
 
-        fetch(`http://localhost:5000/completeTodo/${id}`, {
+        fetch(`https://fast-wave-63089.herokuapp.com/completeTodo/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
