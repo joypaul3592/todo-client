@@ -62,14 +62,14 @@ const CompleteTask = () => {
     }
 
     return (
-        <div className=' mt-12 max-w-7xl mx-auto'>
+        <div className=' mt-12 max-w-7xl mx-auto '>
             <h1 className=' text-xl font-semibold text-sky-700 text-left ml-12 mb-5'>Completed Task</h1>
-            <div className=' mt-12'>
+            <div className=' mt-12 px-4 md:px-0 mb-40 md:mb-10'>
                 {
                     completeTask == '' ? <Loading /> : ''
                 }
                 {
-                    completeTask.map(completeTodo => <div className='w-[50%] mx-auto mt-4 flex items-center py-3 shadow-lg px-3  mb-6 rounded '>
+                    completeTask.map(completeTodo => <div className=' mx-auto mt-4 flex items-center py-3 shadow-lg px-3  mb-6 rounded lg:w-1/2 md:w-3/4 w-full  '>
                         <TbArrowRampRight2 className=' text-xl  mr-7 text-sky-700' />
                         <div className='w-[90%] mx-auto flex items-center justify-between'>
                             <h1>{completeTodo.todoName}</h1>

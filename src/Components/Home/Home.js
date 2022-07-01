@@ -64,9 +64,9 @@ const Home = () => {
 
     return (
         <div>
-            <div className=' py-16 max-w-7xl mx-auto'>
+            <div className=' py-16 max-w-7xl mx-auto px-6 md:px-0'>
                 <h1 className=' text-xl font-semibold text-sky-700 text-left ml-12 mb-5'>ToDo</h1>
-                <div className="form-control w-1/2  mx-auto">
+                <div className="form-control lg:w-1/2 md:w-3/4 w-full mx-auto">
                     <input
                         type="Text"
                         placeholder="Enter Your ToDo"
@@ -86,7 +86,7 @@ const Home = () => {
                     </label>
                 </div>
             </div>
-            <div className='px-[20%]'>
+            <div className='lg:w-1/2 md:w-3/4 w-full mx-auto px-4 md:px-0 mb-40 md:mb-10'>
                 <h1>
                     {
                         todo == '' ? <Loading /> : ''

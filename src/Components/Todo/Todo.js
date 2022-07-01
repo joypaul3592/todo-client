@@ -77,7 +77,7 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
             <div class="modal">
                 <div class="modal-box relative">
                     <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="text-lg font-bold">Update ToDo</h3>
+                    <h3 class="text-lg font-bold">{`Update ToDo :   ${todoname}`}</h3>
 
                     <div className=' py-6 '>
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -86,7 +86,7 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
                                 <input
                                     type="Text"
                                     placeholder={todoname}
-                                    className="input input-bordered mt-4 p-2 bg-red-100 rounded focus:outline-slate-600 w-full max-w-xs"
+                                    className="input input-bordered mt-4 p-2  rounded focus:outline-slate-600 w-full max-w-xs"
                                     {...register("toDo", {
                                         required: {
                                             value: true,
