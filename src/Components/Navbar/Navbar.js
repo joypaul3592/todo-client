@@ -61,15 +61,15 @@ const Navbar = () => {
                                     <div className="flex space-x-4">
                                         <NavLink
                                             to={'/'}
-                                            className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-purple-500' : 'text-black'}`)}
+                                            className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-sky-700' : 'text-black'}`)}
                                         >To-Do</NavLink>
                                         <NavLink
                                             to={'complateTask'}
-                                            className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-purple-500' : 'text-black'}`)}
+                                            className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-sky-700' : 'text-black'}`)}
                                         >Completed Tasks</NavLink>
                                         <NavLink
                                             to={'calender'}
-                                            className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-purple-500' : 'text-black'}`)}
+                                            className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-sky-700' : 'text-black'}`)}
                                         >Calendar
                                         </NavLink>
 
@@ -85,15 +85,15 @@ const Navbar = () => {
                         <div className="flex flex-col px-2 pt-2 pb-3 space-y-1">
                             <NavLink
                                 to={'/'}
-                                className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-purple-500' : 'text-black'}`)}
+                                className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-sky-700' : 'text-black'}`)}
                             >To-Do</NavLink>
                             <NavLink
                                 to={'complateTask'}
-                                className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-purple-500' : 'text-black'}`)}
+                                className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-sky-700' : 'text-black'}`)}
                             >Completed Tasks</NavLink>
                             <NavLink
                                 to={'calender'}
-                                className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-purple-500' : 'text-black'}`)}
+                                className={({ isActive }) => (`px-3 py-2 rounded-md text-md font-medium ${isActive ? 'text-sky-700' : 'text-black'}`)}
                             >Calendar
                             </NavLink>
                         </div>
