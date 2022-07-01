@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { MdDeleteForever } from "react-icons/md";
+import Loading from '../Loading/Loading';
 
 const CompleteTask = () => {
 
@@ -39,6 +40,10 @@ const CompleteTask = () => {
             });
     }, [deletes, completeTask])
 
+
+    if (!completeTask) {
+        return <Loading />
+    }
 
 
     const handelDelete = (id, name) => {
