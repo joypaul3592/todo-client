@@ -68,7 +68,7 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
                     <li className=' text-left ml-4'>{todo.todoName}</li>
                 </div>
             </div>
-            <label onClick={() => { handelclick(todo._id, todo.todoName) }} for="my-modal-3" className=' bg-sky-700 text-white p-1 px-3 rounded font-semibold '>Update</label>
+            <label onClick={() => { handelclick(todo._id, todo.todoName) }} for="my-modal-3" className=' bg-sky-700 cursor-pointer text-white p-1 px-3 rounded font-semibold '>Update</label>
 
 
 
