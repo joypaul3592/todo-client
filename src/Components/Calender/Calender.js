@@ -1,9 +1,13 @@
 import React from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import './Calender.css'
 
 const Calender = () => {
     return (
-        <div>
-            <h1>Calender</h1>
+        <div className=' max-w-7xl mx-auto'>
+            <h1 className=' text-left ml-10 text-xl font-semibold mt-12'>Calender</h1>
+            <Calendar className='react-calendar' />
         </div>
     );
 };

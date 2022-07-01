@@ -17,10 +17,6 @@ const CompleteTask = () => {
 
 
 
-
-
-
-
     useEffect(() => {
 
         fetch(`https://fast-wave-63089.herokuapp.com/completeTodos/`, {
@@ -41,9 +37,7 @@ const CompleteTask = () => {
     }, [deletes, completeTask])
 
 
-    if (!completeTask) {
-        return <Loading />
-    }
+
 
 
     const handelDelete = (id, name) => {
@@ -68,6 +62,9 @@ const CompleteTask = () => {
 
     return (
         <div className=' mt-40'>
+            {
+                completeTask == '' ? <Loading /> : ''
+            }
             {
                 completeTask.map(completeTodo => <div className='w-[50%] mx-auto mt-4 flex items-center bg-red-100 py-1 px-3  mb-4 rounded justify-between'>
                     <h1>{completeTodo.todoName}</h1>

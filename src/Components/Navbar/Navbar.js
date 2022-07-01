@@ -4,7 +4,7 @@ import { Fragment, useEffect } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-// import logo from '../assect/Logo.png'
+import logo from '../../assect/logo.png'
 import { signOut } from 'firebase/auth';
 import auth from '../../Firebase/Firebase.init'
 
@@ -49,12 +49,12 @@ const Navbar = () => {
                             <div className="flex-1 flex items-center lg:justify-between justify-center lg:items-stretch   ">
                                 <div>
                                     <Link className="flex-shrink-0 flex items-center h-full" to={'/'}>
-                                        {/* <img
+                                        <img
                                             className="block h-6 w-auto"
                                             src={logo}
                                             alt="Workflow"
-                                        /> */}
-                                        <h1>Logo</h1>
+                                        />
+
                                     </Link>
                                 </div>
                                 <div className="hidden  lg:block sm:ml-6 ">

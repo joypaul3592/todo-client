@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import useTodos from '../Hook/useTodos';
+import Loading from '../Loading/Loading';
 import Todo from '../Todo/Todo';
 
 
@@ -88,9 +89,13 @@ const Home = () => {
                 </div>
             </div>
             <div className='px-[20%]'>
-                <h1>{
-                    todo.map(to => <Todo key={to._id} todo={to} handelclick={handelclick} updateId={updateId} todoname={todoname}></Todo>)
-                }</h1>
+                <h1>
+                    {
+                        todo == '' ? <Loading /> : ''
+                    }
+                    {
+                        todo.map(to => <Todo key={to._id} todo={to} handelclick={handelclick} updateId={updateId} todoname={todoname}></Todo>)
+                    }</h1>
             </div>
         </div>
     );
