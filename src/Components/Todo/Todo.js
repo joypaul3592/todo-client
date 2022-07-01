@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import { TbArrowRampRight2 } from "react-icons/tb";
 
 const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
 
@@ -60,12 +60,15 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
 
 
     return (
-        <ul className=' flex items-center bg-red-100 py-1 px-3  mb-4 rounded justify-between'>
-            <div className='flex items-center'>
-                <input type="checkbox" onClick={() => handelComplete(todo._id, todo.todoName)} checked={`${todo.check == true ? 'check' : ''}`} class="checkbox border border-gray-900 " />
-                <li className=' text-left ml-4'>{todo.todoName}</li>
+        <ul className=' flex items-center shadow-lg py-2 px-3  mb-4 rounded justify-between'>
+            <div className=' flex items-center '>
+                <TbArrowRampRight2 className=' text-xl  mr-7 text-sky-700' />
+                <div className='flex items-center'>
+                    <input type="checkbox" onClick={() => handelComplete(todo._id, todo.todoName)} checked={`${todo.check == true ? 'check' : ''}`} class={`${todo.check == true ? 'disabled' : ''} checkbox border border-gray-900 `} />
+                    <li className=' text-left ml-4'>{todo.todoName}</li>
+                </div>
             </div>
-            <label onClick={() => { handelclick(todo._id, todo.todoName) }} for="my-modal-3" className=' bg-green-300 p-1 px-3 rounded font-semibold '>Update</label>
+            <label onClick={() => { handelclick(todo._id, todo.todoName) }} for="my-modal-3" className=' bg-sky-700 text-white p-1 px-3 rounded font-semibold '>Update</label>
 
 
 

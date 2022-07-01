@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { MdDeleteForever } from "react-icons/md";
 import Loading from '../Loading/Loading';
+import { TbArrowRampRight2 } from "react-icons/tb";
 
 const CompleteTask = () => {
 
@@ -61,16 +62,22 @@ const CompleteTask = () => {
     }
 
     return (
-        <div className=' mt-40'>
-            {
-                completeTask == '' ? <Loading /> : ''
-            }
-            {
-                completeTask.map(completeTodo => <div className='w-[50%] mx-auto mt-4 flex items-center bg-red-100 py-1 px-3  mb-4 rounded justify-between'>
-                    <h1>{completeTodo.todoName}</h1>
-                    <MdDeleteForever onClick={() => handelDelete(completeTodo._id, completeTodo.todoName)} className=' text-xl cursor-pointer' />
-                </div>)
-            }
+        <div className=' mt-12 max-w-7xl mx-auto'>
+            <h1 className=' text-xl font-semibold text-sky-700 text-left ml-12 mb-5'>Completed Task</h1>
+            <div className=' mt-12'>
+                {
+                    completeTask == '' ? <Loading /> : ''
+                }
+                {
+                    completeTask.map(completeTodo => <div className='w-[50%] mx-auto mt-4 flex items-center py-3 shadow-lg px-3  mb-6 rounded '>
+                        <TbArrowRampRight2 className=' text-xl  mr-7 text-sky-700' />
+                        <div className='w-[90%] mx-auto flex items-center justify-between'>
+                            <h1>{completeTodo.todoName}</h1>
+                            <MdDeleteForever onClick={() => handelDelete(completeTodo._id, completeTodo.todoName)} className=' text-2xl text-red-800 cursor-pointer' />
+                        </div>
+                    </div>)
+                }
+            </div>
         </div>
     );
 };

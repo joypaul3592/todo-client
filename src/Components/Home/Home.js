@@ -64,16 +64,14 @@ const Home = () => {
 
     return (
         <div>
-            <div className=' py-16 '>
-                <div className="form-control w-full max-w-xs mx-auto">
-                    <label className="label">
-                        <span className="label-text">Your To-Do</span>
-                    </label>
+            <div className=' py-16 max-w-7xl mx-auto'>
+                <h1 className=' text-xl font-semibold text-sky-700 text-left ml-12 mb-5'>ToDo</h1>
+                <div className="form-control w-1/2  mx-auto">
                     <input
                         type="Text"
-                        placeholder="Your To-Do"
+                        placeholder="Enter Your ToDo"
                         onKeyPress={commentEnterSubmit}
-                        className="input input-bordered mt-4 p-2 bg-red-100 rounded focus:outline-slate-600 w-full max-w-xs"
+                        className="input rounded-sm mt-4 p-2 px-4  border-b-2 outline-0 border-0 shadow-lg  focus:outline-0 w-full "
                         {...register("toDo", {
                             required: {
                                 value: true,
