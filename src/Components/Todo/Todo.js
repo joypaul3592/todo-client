@@ -64,7 +64,10 @@ const Todo = ({ todo, handelclick, updateId, reset, todoname }) => {
             <div className=' flex items-center '>
                 <TbArrowRampRight2 className=' text-xl  mr-7 text-sky-700' />
                 <div className='flex items-center'>
-                    <input type="checkbox" onClick={() => handelComplete(todo._id, todo.todoName)} checked={`${todo.check == true ? 'check' : ''}`} class={`${todo.check == true ? 'disabled' : ''} checkbox border border-gray-900 `} />
+                    {
+                        todo.check == true ? <input type="checkbox" checked="checked" class="checkbox" disabled /> :
+                            <input type="checkbox" onClick={() => handelComplete(todo._id, todo.todoName)} checked={`${todo.check == true ? 'check' : ''}`} className=' checkbox border border-gray-900 ' />
+                    }
                     <li className=' text-left ml-4'>{todo.todoName}</li>
                 </div>
             </div>
