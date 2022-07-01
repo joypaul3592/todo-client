@@ -32,7 +32,9 @@ const Home = () => {
     const commentEnterSubmit = async (e) => {
         if (e.key === "Enter" && e.shiftKey == false) {
             const data = e.target.value;
-
+            if (data == '') {
+                return
+            }
             const todo = {
                 todoName: data,
                 check: false
@@ -74,9 +76,9 @@ const Home = () => {
                         className="input rounded-sm mt-4 p-2 px-4  border-b-2 outline-0 border-0 shadow-lg  focus:outline-0 w-full "
                         {...register("toDo", {
                             required: {
-                                value: true,
+                                value: 2,
                                 message: 'To-do text is required',
-                                maxLength: 1000,
+                                maxLength: 1000
                             }
                         })}
                     />
